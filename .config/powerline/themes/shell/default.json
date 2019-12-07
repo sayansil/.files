@@ -13,6 +13,10 @@
 				"priority": 30
 			},
 			{
+				"function": "powerline.segments.common.time.date",
+				"priority": 50
+			},
+			{
 				"function": "powerline.segments.common.env.virtualenv",
 				"priority": 50
 			},
@@ -29,6 +33,8 @@
 				"priority": 40
 			}
 		],
-		"right": []
+		"right": [
+
+		]
 	}
 }
