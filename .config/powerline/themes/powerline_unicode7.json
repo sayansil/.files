@@ -149,7 +149,7 @@
 		},
 		"powerline.segments.vim.modified_indicator": {
 			"args": {
-				"text": "🖫⃥"
+				"text": "+"
 			}
 		},
 

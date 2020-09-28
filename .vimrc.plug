@@ -1,0 +1,23 @@
+call plug#begin('~/.vim/plugged')
+
+"Fugitive Vim Github Wrapper
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'neoclide/coc.nvim'
+Plug 'kien/ctrlp.vim'
+Plug 'yggdroot/indentline'
+Plug 'ap/vim-css-color'
+Plug 'scrooloose/nerdtree'
+Plug 'jamshedvesuna/vim-markdown-preview'
+Plug 'vim-scripts/sudo.vim'
+Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'jnurmine/zenburn'
+Plug 'junegunn/vim-emoji'
+Plug 'tpope/vim-surround'
+Plug 'mg979/vim-visual-multi'
+Plug 'vim-scripts/matchit.zip'
+Plug 'luochen1990/rainbow'
+Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
+
+call plug#end()

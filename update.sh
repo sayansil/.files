@@ -18,3 +18,6 @@ cp -ar ~/.config/rofi/* .config/rofi
 
 mkdir -p .config/termite
 cp -ar ~/.config/termite/config .config/termite
+
+cp -ar ~/.vimrc .vimrc
+cp -ar ~/.vimrc.plug .vimrc.plug

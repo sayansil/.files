@@ -6,7 +6,7 @@ bold_is_bright = true
 #cell_width_scale = 1.0
 clickable_url = true
 dynamic_title = true
-font = Monospace 10
+font = Firacode Retina 11
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -18,6 +18,8 @@ scrollback_lines = -1
 #search_wrap = true
 #urgent_on_bell = true
 #hyperlinks = false
+
+geometry = 1920x1080
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 #browser = xdg-open
