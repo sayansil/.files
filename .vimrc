@@ -6,9 +6,6 @@ endif
 " Set compatibility to Vim only.
 set nocompatible
 
-" Helps force plug-ins to load correctly when it is turned back on below.
-filetype plugin indent on
-
 " Turn on syntax highlighting.
 syntax on
 
@@ -31,7 +28,7 @@ set nowrap
 set backspace=indent,eol,start
 
 " Font style
-set guifont=Fira\ Code
+set guifont=FiraMono\ Nerd\ Font\ 11
 
 " Indent character
 let g:indentLine_char = '┆'
@@ -60,7 +57,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set number
 
 " Encoding
-set encoding=utf-8
+set encoding=utf8
 
 " ******** COC Settings start ********
 
@@ -210,10 +207,21 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " GitGutter settings
 let g:gitgutter_enabled = 1
+let g:gitgutter_map_keys = 0
 
-" Open nerdtree by default when opening a folder
+" Navigate tabs
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+
+" Nerdtree settings
 let g:NERDTreeHijackNetrw = 1
 au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]
+let NERDTreeShowHidden=1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 
 "Remember cursor position
 if has("autocmd")
@@ -223,20 +231,31 @@ endif
 " Emoji completion
 set completefunc=emoji#complete
 
-" Smooth scrolling
-"noremap <silent> <PageUp> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-"noremap <silent> <PageDown> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" Markdown preview settings
+let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_mathjax = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_port = 8888
 
-" Pwerline for vim
-set  rtp+=/usr/lib/python3.8/site-packages/powerline/bindings/vim/
-set laststatus=2
-set t_Co=256
+" Airline for Vim
+let g:airline_powerline_fonts = 1
+let g:airline_skip_empty_sections = 1
+let g:airline_theme='minimalist'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#tabline#show_tab_count = 0
+let g:airline_section_y = ''
+"let g:airline_statusline_ontop=1
 
 " Color scheme
-colors zenburn
-let g:zenburn_transparent = 1
-hi Normal guibg=NONE ctermbg=NONE
+set t_Co=256
+colorscheme minimalist
 
-" Enable rainbow parenthesis
-let g:rainbow_active = 1
-
+" Devicons settings
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:NERDTreeDirArrowExpandable = "\u00a0"
+let g:NERDTreeDirArrowCollapsible = "\u00a0"
+let g:DevIconsEnableFoldersOpenClose = 1
