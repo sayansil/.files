@@ -254,8 +254,9 @@ set t_Co=256
 colorscheme minimalist
 
 " Devicons settings
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsNerdTreeAfterGlyphPadding = '  '
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:NERDTreeDirArrowExpandable = "\u00a0"
 let g:NERDTreeDirArrowCollapsible = "\u00a0"
 let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsUnicodeGlyphDoubleWidth = 1
