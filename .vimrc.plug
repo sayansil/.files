@@ -20,6 +20,7 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'vim-airline/vim-airline'
 Plug 'dikiaap/minimalist'
 Plug 'ryanoasis/vim-devicons'
-Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 call plug#end()

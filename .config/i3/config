@@ -175,8 +175,8 @@ bindsym $mod+r mode "resize"
 # Themeing the i3 wm
 
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.focused          #a35718 #a35718 #F8F8F2 #a35718   #a35718
+client.focused_inactive #282A36 #282A36 #F8F8F2 #282A36   #282A36
 client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
 client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
@@ -225,7 +225,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id volnoti -a 0.6
 exec --no-startup-id "picom -cbf"
 #exec --no-startup-id "redshift -O 3500"
-exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/dc6nyxz-aea7747d-8b1f-4e32-b62d-a01751e07b1b.jpg
+#exec --no-startup-id nitrogen --set-zoom-fill ~/Pictures/dc6nyxz-aea7747d-8b1f-4e32-b62d-a01751e07b1b.jpg
+exec --no-startup-id "feh --bg-fill ~/Pictures/wallpaper/current.jpg"
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
 exec killall -q notify-osd
@@ -236,12 +237,26 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        font pango:RobotoMono 8
-        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
 
+set $bg-color            #211b1b
+set $inactive-bg-color   #3f322f
+set $text-color          #F3F4F5
+set $inactive-text-color #676E7D
+set $urgent-bg-color     #E53935
+
+bar {
+        font pango:RobotoMono 10
+	status_command bumblebee-status \
+		-m indicator optman memory battery pasink datetime dunst nic \
+                -p memory.usedonly=true nic.format="{ssid}" nic.states="up" indicator.include="capslock" datetime.format="%-d %b, %a  %-I:%M" \
+		-t night-powerline
         colors {
-                separator #5e5e5e
-                background #1e1e1e
+                background $bg-color
+                separator #757575
+            	#                  border             background         text
+            	focused_workspace  $bg-color          $bg-color          $text-color
+            	inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+            	active_workspace   $inactive-bg-color $inactive-bg-color $inactive-text-color
+            	urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
         }
 }
