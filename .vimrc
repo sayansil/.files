@@ -213,6 +213,7 @@ let g:gitgutter_map_keys = 0
 map <C-left> :tabp<cr>
 map <C-right> :tabn<cr>
 
+
 " Nerdtree settings
 let g:NERDTreeHijackNetrw = 1
 au VimEnter NERD_tree_1 enew | execute 'NERDTree '.argv()[0]

@@ -3,6 +3,7 @@ cp -ar ~/.config/dunst/dunstrc .config/dunst/
 
 mkdir -p .config/i3
 cp -ar ~/.config/i3/config .config/i3
+cp -ar ~/.config/i3/lock.sh .config/lock.sh
 
 mkdir -p .config/i3blocks
 cp -ar ~/.config/i3blocks/i3blocks.conf .config/i3blocks
@@ -21,3 +22,5 @@ cp -ar ~/.config/termite/config .config/termite
 
 cp -ar ~/.vimrc .vimrc
 cp -ar ~/.vimrc.plug .vimrc.plug
+
+cp -ar ~/.bashrc .bashrc
