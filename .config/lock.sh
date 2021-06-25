@@ -9,6 +9,8 @@ T='#f2f2f2'  # text
 W='#5e5e5e'  # wrong
 V='#2e2e2e'  # verifying
 
+dunstctl set-paused true
+
 i3lock \
 --insidever-color=$C   \
 --ringver-color=$V     \
@@ -36,3 +38,5 @@ i3lock \
 --time-str="%H:%M:%S"  \
 --date-str="%A, %m %Y" \
 --keylayout 1         \
+
+dunstctl set-paused false
