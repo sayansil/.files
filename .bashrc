@@ -18,6 +18,10 @@ alias naked-services='systemctl list-unit-files --state=enabled'
 alias bathe-pacman='sudo rm -R /var/lib/pacman/sync/;sudo pacman -Syu;sudo pacman -Syy'
 alias gae_start='dev_appserver.py app.yaml'
 alias manipulate_speakers='amixer sset Master'
+alias mt="[ ! -d '/run/media/sayan/Data/Programmer' ] && (([ ! -d '/run/media/sayan/Data' ] && sudo mkdir -p /run/media/sayan/Data); sudo mount /dev/sdb5 /run/media/sayan/Data)"
+alias ut="[ -d '/run/media/sayan/Data/Programmer' ] && (sudo umount /run/media/sayan/Data)"
+alias cdp="cd /run/media/sayan/Data/Programmer"
+
 # manipulate_speakers 10%, 90%
 complete -cf sudo
 

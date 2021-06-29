@@ -249,6 +249,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_tab_count = 0
 let g:airline_section_y = ''
 "let g:airline_statusline_ontop=1
+let g:airline#extensions#whitespace#enabled = 0
+"let g:airline_extensions = []
 
 " Color scheme
 set t_Co=256
@@ -268,3 +270,13 @@ let g:lsp_cxx_hl_use_text_props=1
 let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
+
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
+

@@ -191,6 +191,8 @@ new_window 1pixel
 gaps inner 5
 gaps outer 5
 
+smart_borders on
+
 # Pulse Audio controls
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
@@ -247,7 +249,7 @@ set $urgent-bg-color     #E53935
 bar {
         font pango:RobotoMono 10
 	status_command bumblebee-status \
-		-m indicator optman memory battery pasink datetime dunst nic \
+		-m indicator optman memory  battery pasink datetime dunst nic \
                 -p memory.usedonly=true nic.format="{ssid}" nic.states="up" indicator.include="capslock" datetime.format="%-d %b, %a  %-I:%M" \
 		-t night-powerline
         colors {
