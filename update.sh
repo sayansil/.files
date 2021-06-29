@@ -23,4 +23,7 @@ cp -ar ~/.config/termite/config .config/termite
 cp -ar ~/.vimrc .vimrc
 cp -ar ~/.vimrc.plug .vimrc.plug
 
+cp -ar ~/.p10k.zsh .p10k.zsh
+cp -ar ~/.zshrc .zshrc
+
 cp -ar ~/.bashrc .bashrc
